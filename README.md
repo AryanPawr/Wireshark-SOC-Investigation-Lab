@@ -1,12 +1,12 @@
-# 🔍 Wireshark Network Traffic Investigation (SOC Simulation)
+#  Wireshark Network Traffic Investigation (SOC Simulation)
 
-## 📌 Project Overview
+##  Project Overview
 
 In this project, I performed a simulated Security Operations Center (SOC) investigation using Wireshark. The objective was to capture and analyze network traffic in a controlled lab environment and identify any suspicious activity that could indicate phishing or data exfiltration.
 
 This project helped me understand how real-world analysts monitor and investigate network communications at the packet level.
 
-## 🎯 Objectives
+##  Objectives
 
 - Capture and analyze live network traffic  
 - Inspect DNS, TCP, and HTTP protocols  
@@ -15,7 +15,7 @@ This project helped me understand how real-world analysts monitor and investigat
 - Simulate a basic SOC investigation workflow  
 - Document findings and recommended mitigations  
 
-## 🖥️ Lab Environment
+##  Lab Environment
 
 - Host OS: macOS / Windows  
 - Virtualization: VirtualBox  
@@ -23,12 +23,12 @@ This project helped me understand how real-world analysts monitor and investigat
 - Test Setup: Local VM-based lab (controlled environment)  
 - Network Type: NAT / Host-Only  
 
-## 🔎 Investigation Process
+##  Investigation Process
 
-### 1️⃣ Packet Capture  
+###  Packet Capture  
 Captured live traffic from the active network interface while generating normal browsing activity.
 
-### 2️⃣ Traffic Filtering  
+###  Traffic Filtering  
 Applied protocol-based filters including:
 
 - dns
@@ -39,18 +39,18 @@ Applied protocol-based filters including:
 
 These filters helped isolate relevant traffic and reduce noise.
 
-### 3️⃣ DNS Analysis  
+###  DNS Analysis  
 Reviewed DNS queries and responses to understand domain resolution behavior. Checked for irregular or suspicious domain patterns.
 
-### 4️⃣ TCP Session Analysis  
+###  TCP Session Analysis  
 Observed TCP three-way handshakes (SYN → SYN-ACK → ACK) and used **Follow TCP Stream** to reconstruct full communication sessions between client and server.
 
-### 5️⃣ HTTP Inspection  
+###  HTTP Inspection  
 Inspected HTTP headers and request methods (GET/POST). Noted that unencrypted HTTP traffic exposes data in plaintext, highlighting potential security risks.
 
 ---
 
-## 🚨 Observations
+##  Observations
 
 - DNS queries are visible in plaintext  
 - HTTP traffic can expose sensitive information if not encrypted  
@@ -58,7 +58,7 @@ Inspected HTTP headers and request methods (GET/POST). Noted that unencrypted HT
 - Large outbound packets may indicate possible data transfer activity  
 
 
-## 🛡️ Mitigation Recommendations
+##  Mitigation Recommendations
 
 - Enforce HTTPS-only browsing policies  
 - Implement DNS filtering and monitoring  
@@ -66,7 +66,7 @@ Inspected HTTP headers and request methods (GET/POST). Noted that unencrypted HT
 - Deploy IDS/IPS solutions for anomaly detection  
 - Conduct regular phishing awareness training  
 
-## ⚠️ Challenges Faced
+##  Challenges Faced
 
 - Initially struggled to filter out background system noise in the packet capture  
 - Required practice to properly interpret TCP flags and session flow  
@@ -76,7 +76,7 @@ Inspected HTTP headers and request methods (GET/POST). Noted that unencrypted HT
 These challenges improved my ability to analyze traffic methodically rather than jumping to conclusions.
 
 
-## 🔑 Skills Demonstrated
+##  Skills Demonstrated
 
 - Packet-level network traffic analysis  
 - Practical use of Wireshark filters  
@@ -86,7 +86,7 @@ These challenges improved my ability to analyze traffic methodically rather than
 - Technical documentation and reporting  
 
 
-## 🇦🇺 Relevance to Australian SOC Roles
+##  Relevance to Australian SOC Roles
 
 This project reflects core tasks performed by entry-level SOC Analysts in Australia, including:
 
@@ -98,6 +98,6 @@ This project reflects core tasks performed by entry-level SOC Analysts in Austra
 The hands-on experience with packet inspection and structured investigation strengthens my foundation for Security Operations and Blue Team roles.
 
 
-## 📌 Summary
+##  Summary
 
 This lab strengthened my understanding of how network communication works at a technical level and how security analysts detect and investigate suspicious behavior using tools like Wireshark.
